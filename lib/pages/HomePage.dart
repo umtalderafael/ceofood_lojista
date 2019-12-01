@@ -147,7 +147,57 @@ class _HomePageState extends State<HomePage> {
 
     setState(() {
       listaPedidos = [];
-      _carregando = false;
+      _carregando = true;
+    });
+
+    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
+
+    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
+
+    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
+
+    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
+
+    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
+
+    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
+
+    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
+
+    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
+
+    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
+
+    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
+
+    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
+
+//    print(listaPedidos);
+
+    Future.delayed(const Duration(milliseconds: 1500), () {
+
+      setState(() {
+        _carregando = false;
+      });
+
     });
 
 //    String url = '';
@@ -173,7 +223,9 @@ class _HomePageState extends State<HomePage> {
               label: 'Tentar novamente',
               onPressed: () {
                 _refreshIndicatorKey.currentState.show();
-              })));
+              }
+              )
+      ));
     });
   }
 
@@ -237,9 +289,7 @@ class _HomePageState extends State<HomePage> {
     );
 
 
-
     Widget sidebar = new Sidebar(
-
         nome: usuarioNome,
         email: usuarioEmail,
         imagem: usuarioImagem
@@ -311,177 +361,162 @@ class _HomePageState extends State<HomePage> {
 
 
 
-
-
     Widget listagem = new ListView.builder(
-      itemCount: 20,
+      itemCount: listaPedidos.length,
       itemBuilder: (context, index) {
 
-        return new ListTile(
-          onTap: (){
-
-            print('card');
-
-
-          },
-          title: new AnimatedCard(
-            direction: AnimatedCardDirection.left, //Initial animation direction
-            initDelay: Duration(milliseconds: 0), //Delay to initial animation
-            duration: Duration(milliseconds: 1000), //Initial animation duration
-            child: new Card(
-//                margin: EdgeInsets.all(5),
-                elevation: 5,
-                child: new Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/home.jpg"),
-                      fit: BoxFit.cover,
-                      colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.dstATop),
-                    ),
+        return new AnimatedCard(          
+          direction: AnimatedCardDirection.left, //Initial animation direction
+          initDelay: Duration(milliseconds: 0), //Delay to initial animation
+          duration: Duration(milliseconds: 1000), //Initial animation duration
+          child: new Card(
+              child: new Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.zero),
+                  image: DecorationImage(
+                    
+                    image: AssetImage("assets/home.jpg"),
+                    fit: BoxFit.cover,
+                    
+                    colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.dstATop),
                   ),
-                  child: new Padding(padding: const EdgeInsets.fromLTRB(10, 0, 0, 10),
-                      child: new Row(
-                        children: <Widget>[
+                ),
+                child: new Padding(padding: const EdgeInsets.fromLTRB(10, 0, 0, 10),
+                    child: new Row(
+                      children: <Widget>[
 
-                          new Column(
+                        new Column(
+                          children: <Widget>[
+
+                            new Container(
+                              width: 60,
+                              child: new Text('Pedido',
+                                textAlign: TextAlign.center, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+
+                            new Container(
+                              width: 60,
+                              child: new Text('#${listaPedidos[index].id}',
+                                textAlign: TextAlign.center, style: TextStyle(fontSize: 10),
+                              ),
+                            ),
+
+                            new SizedBox(height: 10),
+
+                            InkWell(
+                              onTap: (){
+
+                                print('apertou');
+
+                              },
+                              child: new Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: hexToColor('${listaPedidos[index].cor}')
+                                  ),
+                                  child:
+                                  new Padding(padding: const EdgeInsets.all(15), child:
+                                  new Container(
+                                    width: 25,
+                                    height: 25,
+                                    decoration: new BoxDecoration(
+                                      image: new DecorationImage(
+                                          image: new ExactAssetImage('assets/status/${listaPedidos[index].icone}.png'),
+                                          fit: BoxFit.contain
+                                      ),
+                                    ),
+                                  ),
+                                  )
+                              ),
+                            ),
+
+                            new Container(
+                              width: 60,
+                              child: new Text('${listaPedidos[index].status}',
+                                textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Colors.white),
+                              ),
+                            )
+
+                          ],
+                        ),
+
+                        new Padding(padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                          child: new Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
 
                               new Container(
-                                width: 60,
-                                child: new Text('Pedido',
-                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                                ),
+                                  width: MediaQuery.of(context).size.width * 0.65,
+                                  height: 25,
+                                  child: new ListTile(
+                                    leading: Padding(padding: EdgeInsets.fromLTRB(20, 2, 0, 0), child: Icon(Icons.person, size: 18,),),
+                                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                    title: new Text('${listaPedidos[index].nome}',
+                                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)
+                                    ),
+
+                                  )
                               ),
 
                               new Container(
-                                width: 60,
-                                child: new Text('#562452',
-                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 10),
-                                ),
+                                  width: MediaQuery.of(context).size.width * 0.65,
+                                  height: 25,
+                                  child: new ListTile(
+                                    leading: Padding(padding: EdgeInsets.fromLTRB(20, 2, 0, 0), child: Icon(Icons.calendar_today, size: 18,),),
+                                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                    title: new Text('${listaPedidos[index].data}', style: TextStyle(fontSize: 14)),
+                                  )
                               ),
 
-                              new SizedBox(height: 10),
+                              Divider(color: Colors.black,),
 
-                              InkWell(
-                                onTap: (){
-                                  
-                                  print('apertou');
-
-                                },
-                                child: new Container(
-                                    width: 60,
-                                    height: 60,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        color: hexToColor('#FF6417')
-                                    ),
-                                    child:
-                                    new Padding(padding: const EdgeInsets.all(15), child:
-                                    new Container(
-                                      width: 25,
-                                      height: 25,
-                                      decoration: new BoxDecoration(
-                                        image: new DecorationImage(
-                                            image: new ExactAssetImage('assets/status/analise.png'),
-                                            fit: BoxFit.contain
-                                        ),
-                                      ),
-                                    ),
-                                    )
-                                ),
+                              new Container(
+                                  width: MediaQuery.of(context).size.width * 0.65,
+                                  height: 45,
+                                  child: new ListTile(
+                                    leading: Padding(padding: EdgeInsets.fromLTRB(20, 8, 0, 0), child: Icon(Icons.local_shipping, size: 28,),),
+                                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                    title: new Text('${listaPedidos[index].frete}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                                    subtitle: new Text('Taxa de entrega - R\u0024 ${listaPedidos[index].frete_valor}'),
+                                  )
                               ),
+
+                              Divider(color: Colors.black,),
+
+
+
 
 
 
                               new Container(
-                                width: 60,
-                                child: new Text('Análise',
-                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 10, color: Colors.white),
-                                ),
-                              )
+                                  width: MediaQuery.of(context).size.width * 0.65,
+                                  height: 50,
+                                  child: new ListTile(
+                                    leading: Padding(padding: EdgeInsets.fromLTRB(20, 8, 0, 0), child: Icon(Icons.monetization_on, size: 28,),),
+                                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                    title: new Text('${listaPedidos[index].pagamento}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                                    subtitle: new Text('Total - R\u0024 ${listaPedidos[index].total}'),
+                                  )
+                              ),
+
+                              SizedBox(height: 20,)
 
                             ],
                           ),
+                        )
 
-                          new Padding(padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                            child: new Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-
-                                new Container(
-                                    width: MediaQuery.of(context).size.width * 0.65,
-                                    height: 25,
-                                    child: new ListTile(
-                                      leading: Icon(Icons.person, size: 18,),
-                                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                      title: new Text('Rafael Carvalho',
-                                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)
-                                      ),
-
-                                    )
-                                ),
-
-                                new Container(
-                                    width: MediaQuery.of(context).size.width * 0.65,
-                                    height: 25,
-                                    child: new ListTile(
-                                      leading: Icon(Icons.calendar_today, size: 18,),
-                                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                      title: new Text('22/11/2019 as 19:00', style: TextStyle(fontSize: 14)),
-                                    )
-                                ),
-
-                                Divider(color: Colors.black,),
-
-                                new Container(
-                                    width: MediaQuery.of(context).size.width * 0.65,
-                                    height: 45,
-                                    child: new ListTile(
-                                      leading: Icon(Icons.local_shipping, size: 40,),
-                                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                      title: new Text('Delivery', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-                                      subtitle: new Text('Taxa de entrega - R\u0024 5,00'),
-                                    )
-                                ),
-
-                                Divider(color: Colors.black,),
-
-                                new Container(
-                                    width: MediaQuery.of(context).size.width * 0.65,
-                                    height: 50,
-                                    child: new ListTile(
-                                      leading: Icon(Icons.monetization_on, size: 40,),
-                                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                      title: new Text('Cartão Elo', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-                                      subtitle: new Text('Total - R\u0024 25,00'),
-                                    )
-                                ),
-
-                                SizedBox(height: 20,)
-
-                              ],
-                            ),
-                          )
-
-                        ],
-                      )
-                  ),
-                )
-            ),
+                      ],
+                    )
+                ),
+              )
           ),
         );
 
       },
     );
-
-
-
-
-
-
-
-
-
 
 
 
