@@ -38,10 +38,10 @@ class _LoginPageState extends State<LoginPage> {
 
     senhaFocusNode = FocusNode();
     emailFocusNode = FocusNode();
-    emailController.text = 'umtalderafael@hotmail.com';
+//    emailController.text = 'umtalderafael@hotmail.com';
 //    emailController.text = 'rafael@hotmail.com';
 //    emailController.text = 'contato@filmaxbox.com';
-    senhaController.text = '456789';
+//    senhaController.text = '456789';
 
   }
 

@@ -10,8 +10,11 @@
 //import 'OrdemPage.dart';
 //import 'PesquisarPage.dart';
 
+import 'package:badges/badges.dart';
 import 'package:ceofood_lojista/components/sidebar.dart';
 import 'package:ceofood_lojista/model/modelPedido.dart';
+import 'package:ceofood_lojista/pages/PedidoDetalhesPage.dart';
+import 'package:ceofood_lojista/pages/PedidoStatusPage.dart';
 
 import 'dart:io';
 import 'dart:async';
@@ -150,49 +153,17 @@ class _HomePageState extends State<HomePage> {
       _carregando = true;
     });
 
-    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
+    for (var i = 0; i < 10; i++) {
+      listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
+      listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
+      listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
+      listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
+    }
 
-    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
-
-    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
-
-    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
-
-    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
-
-    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
-
-    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
-
-    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
-
-    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
-
-    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
-
-    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
-
-    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
-
-    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
-
-    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
-
-    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
-
-    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
-
-    listaPedidos.add(new ModelPedido('45466546', 'Rafael Carvalho', '20/11/2019 as 20:30', 'Em análise', '1', 'analise', '#FF7010', 'Delivery', '10,00', 'Dinheiro', '20,00'));
-
-    listaPedidos.add(new ModelPedido('47846544', 'Benedita da Silva', '20/11/2019 as 20:35', 'Aceito', '2', 'aceito', '#1B91EB', 'Retirar na loja', '0,00', 'Cartão de Crédito', '30,00'));
-
-    listaPedidos.add(new ModelPedido('47846544', 'Flávio Mendonça', '20/11/2019 as 20:40', 'Concluido', '3', 'concluido', '#5FBA7D', 'Delivery', '15,00', 'Cartão de Débito', '50,00'));
-
-    listaPedidos.add(new ModelPedido('489612311', 'Silvio Paulino', '20/11/2019 as 21:00', 'Em entrega', '4', 'pronto', '#395697', 'Delivery', '10,00', 'Cartão de Débito', '45,00'));
 
 //    print(listaPedidos);
 
-    Future.delayed(const Duration(milliseconds: 1500), () {
+    Future.delayed(const Duration(milliseconds: 3000), () {
 
       setState(() {
         _carregando = false;
@@ -262,9 +233,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     Widget navBarLogado = AppBar(
-
       iconTheme: new IconThemeData(color: Colors.deepOrange),
-
       elevation: 0.5,
       leading: new IconButton(
         padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
@@ -278,8 +247,11 @@ class _HomePageState extends State<HomePage> {
 
         new FlatButton.icon(
           textColor: Colors.white,
-          icon: Icon(Icons.history, size: 14,), //`Icon` to display
-          label: Text('Concluídos', style: TextStyle(fontSize: 14)), //`Text` to display
+          icon: Badge(
+            badgeColor: Colors.white,
+            badgeContent: Text('40', style: TextStyle(color: Colors.deepOrange, fontSize: 12)),
+          ),
+          label: Text('Pedidos', style: TextStyle(fontSize: 14)), //`Text` to display
           onPressed: () {
 //            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => new PedidosFinalizadosPage()));
           },
@@ -365,153 +337,161 @@ class _HomePageState extends State<HomePage> {
       itemCount: listaPedidos.length,
       itemBuilder: (context, index) {
 
-        return new AnimatedCard(          
-          direction: AnimatedCardDirection.left, //Initial animation direction
-          initDelay: Duration(milliseconds: 0), //Delay to initial animation
-          duration: Duration(milliseconds: 1000), //Initial animation duration
-          child: new Card(
-              child: new Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.zero),
-                  image: DecorationImage(
-                    
-                    image: AssetImage("assets/home.jpg"),
-                    fit: BoxFit.cover,
-                    
-                    colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.dstATop),
+        return InkWell(
+          onTap: (){
+
+            Navigator.push(context, MaterialPageRoute(builder: (context) => PedidoDetalhesPage()));
+
+
+          },
+          child: new AnimatedCard(
+            direction: AnimatedCardDirection.left, //Initial animation direction
+            initDelay: Duration(milliseconds: 0), //Delay to initial animation
+            duration: Duration(milliseconds: 1000), //Initial animation duration
+            child: new Card(
+                child: new Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.zero),
+                    image: DecorationImage(
+
+                      image: AssetImage("assets/home.jpg"),
+                      fit: BoxFit.cover,
+
+                      colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.dstATop),
+                    ),
                   ),
-                ),
-                child: new Padding(padding: const EdgeInsets.fromLTRB(10, 0, 0, 10),
-                    child: new Row(
-                      children: <Widget>[
+                  child: new Padding(padding: const EdgeInsets.fromLTRB(10, 0, 0, 10),
+                      child: new Row(
+                        children: <Widget>[
 
-                        new Column(
-                          children: <Widget>[
-
-                            new Container(
-                              width: 60,
-                              child: new Text('Pedido',
-                                textAlign: TextAlign.center, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-
-                            new Container(
-                              width: 60,
-                              child: new Text('#${listaPedidos[index].id}',
-                                textAlign: TextAlign.center, style: TextStyle(fontSize: 10),
-                              ),
-                            ),
-
-                            new SizedBox(height: 10),
-
-                            InkWell(
-                              onTap: (){
-
-                                print('apertou');
-
-                              },
-                              child: new Container(
-                                  width: 60,
-                                  height: 60,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: hexToColor('${listaPedidos[index].cor}')
-                                  ),
-                                  child:
-                                  new Padding(padding: const EdgeInsets.all(15), child:
-                                  new Container(
-                                    width: 25,
-                                    height: 25,
-                                    decoration: new BoxDecoration(
-                                      image: new DecorationImage(
-                                          image: new ExactAssetImage('assets/status/${listaPedidos[index].icone}.png'),
-                                          fit: BoxFit.contain
-                                      ),
-                                    ),
-                                  ),
-                                  )
-                              ),
-                            ),
-
-                            new Container(
-                              width: 60,
-                              child: new Text('${listaPedidos[index].status}',
-                                textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Colors.white),
-                              ),
-                            )
-
-                          ],
-                        ),
-
-                        new Padding(padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                          child: new Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          new Column(
                             children: <Widget>[
 
                               new Container(
-                                  width: MediaQuery.of(context).size.width * 0.65,
-                                  height: 25,
-                                  child: new ListTile(
-                                    leading: Padding(padding: EdgeInsets.fromLTRB(20, 2, 0, 0), child: Icon(Icons.person, size: 18,),),
-                                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                    title: new Text('${listaPedidos[index].nome}',
-                                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)
+                                width: 60,
+                                child: new Text('Pedido',
+                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+
+                              new Container(
+                                width: 60,
+                                child: new Text('#${listaPedidos[index].id}',
+                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 10),
+                                ),
+                              ),
+
+                              new SizedBox(height: 10),
+
+                              InkWell(
+                                onTap: (){
+
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => PedidoStatusPage()));
+
+                                },
+                                child: new Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        color: hexToColor('${listaPedidos[index].cor}')
                                     ),
-
-                                  )
+                                    child:
+                                    new Padding(padding: const EdgeInsets.all(15), child:
+                                    new Container(
+                                      width: 25,
+                                      height: 25,
+                                      decoration: new BoxDecoration(
+                                        image: new DecorationImage(
+                                            image: new ExactAssetImage('assets/status/${listaPedidos[index].icone}.png'),
+                                            fit: BoxFit.contain
+                                        ),
+                                      ),
+                                    ),
+                                    )
+                                ),
                               ),
 
                               new Container(
-                                  width: MediaQuery.of(context).size.width * 0.65,
-                                  height: 25,
-                                  child: new ListTile(
-                                    leading: Padding(padding: EdgeInsets.fromLTRB(20, 2, 0, 0), child: Icon(Icons.calendar_today, size: 18,),),
-                                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                    title: new Text('${listaPedidos[index].data}', style: TextStyle(fontSize: 14)),
-                                  )
-                              ),
-
-                              Divider(color: Colors.black,),
-
-                              new Container(
-                                  width: MediaQuery.of(context).size.width * 0.65,
-                                  height: 45,
-                                  child: new ListTile(
-                                    leading: Padding(padding: EdgeInsets.fromLTRB(20, 8, 0, 0), child: Icon(Icons.local_shipping, size: 28,),),
-                                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                    title: new Text('${listaPedidos[index].frete}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-                                    subtitle: new Text('Taxa de entrega - R\u0024 ${listaPedidos[index].frete_valor}'),
-                                  )
-                              ),
-
-                              Divider(color: Colors.black,),
-
-
-
-
-
-
-                              new Container(
-                                  width: MediaQuery.of(context).size.width * 0.65,
-                                  height: 50,
-                                  child: new ListTile(
-                                    leading: Padding(padding: EdgeInsets.fromLTRB(20, 8, 0, 0), child: Icon(Icons.monetization_on, size: 28,),),
-                                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                    title: new Text('${listaPedidos[index].pagamento}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-                                    subtitle: new Text('Total - R\u0024 ${listaPedidos[index].total}'),
-                                  )
-                              ),
-
-                              SizedBox(height: 20,)
+                                width: 60,
+                                child: new Text('${listaPedidos[index].status}',
+                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Colors.white),
+                                ),
+                              )
 
                             ],
                           ),
-                        )
 
-                      ],
-                    )
-                ),
-              )
+                          new Padding(padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                            child: new Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+
+                                new Container(
+                                    width: MediaQuery.of(context).size.width * 0.65,
+                                    height: 25,
+                                    child: new ListTile(
+                                      leading: Padding(padding: EdgeInsets.fromLTRB(20, 2, 0, 0), child: Icon(Icons.person, size: 18,),),
+                                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                      title: new Text('${listaPedidos[index].nome}',
+                                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)
+                                      ),
+
+                                    )
+                                ),
+
+                                new Container(
+                                    width: MediaQuery.of(context).size.width * 0.65,
+                                    height: 25,
+                                    child: new ListTile(
+                                      leading: Padding(padding: EdgeInsets.fromLTRB(20, 2, 0, 0), child: Icon(Icons.calendar_today, size: 18,),),
+                                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                      title: new Text('${listaPedidos[index].data}', style: TextStyle(fontSize: 14)),
+                                    )
+                                ),
+
+                                Divider(color: Colors.black,),
+
+                                new Container(
+                                    width: MediaQuery.of(context).size.width * 0.65,
+                                    height: 45,
+                                    child: new ListTile(
+                                      leading: Padding(padding: EdgeInsets.fromLTRB(20, 8, 0, 0), child: Icon(Icons.local_shipping, size: 28,),),
+                                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                      title: new Text('${listaPedidos[index].frete}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                                      subtitle: new Text('Taxa de entrega - R\u0024 ${listaPedidos[index].frete_valor}'),
+                                    )
+                                ),
+
+                                Divider(color: Colors.black,),
+
+
+
+
+
+
+                                new Container(
+                                    width: MediaQuery.of(context).size.width * 0.65,
+                                    height: 50,
+                                    child: new ListTile(
+                                      leading: Padding(padding: EdgeInsets.fromLTRB(20, 8, 0, 0), child: Icon(Icons.monetization_on, size: 28,),),
+                                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                      title: new Text('${listaPedidos[index].pagamento}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                                      subtitle: new Text('Total - R\u0024 ${listaPedidos[index].total}'),
+                                    )
+                                ),
+
+                                SizedBox(height: 20,)
+
+                              ],
+                            ),
+                          )
+
+                        ],
+                      )
+                  ),
+                )
+            ),
           ),
         );
 
@@ -535,8 +515,8 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Colors.white30,
             appBar: navBarLogado,
             drawer: sidebar,
-            body: new ModalProgressHUD(
-                child: new LiquidPullToRefresh(
+            body:  _carregando ? carregando :
+              new LiquidPullToRefresh(
                     color: Colors.deepOrangeAccent,
                     backgroundColor: Colors.white,
                     key: _refreshIndicatorKey,
@@ -544,12 +524,8 @@ class _HomePageState extends State<HomePage> {
                     showChildOpacityTransition: true,
                     child: listagem
                 ),
-                inAsyncCall: _carregando,
-                dismissible: false,
-                opacity: 1.0,
-                color: Colors.black26,
-                progressIndicator: carregando
-            ),
+
+
 
         );
 
