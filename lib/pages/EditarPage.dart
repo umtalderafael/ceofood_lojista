@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:ceofood_lojista/pages/EditarImagemPage.dart';
 import 'package:ceofood_lojista/pages/HomePage.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class EditarPage extends StatefulWidget {
 
 class _EditarPageState extends State<EditarPage> {
 
-  String URL_SOCKET;
+
 
   final nomeController = TextEditingController();
 
@@ -218,7 +219,7 @@ class _EditarPageState extends State<EditarPage> {
                 padding: const EdgeInsets.all(8.0),
                 splashColor: Colors.blueAccent,
                 onPressed: () async {
-  //                Navigator.push(context, MaterialPageRoute(builder: (context)=> new EditarImagemPage() ));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> new EditarImagemPage() ));
                 },
               ),
             ),

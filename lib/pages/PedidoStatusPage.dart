@@ -1,6 +1,7 @@
 
 
 import 'dart:convert';
+import 'package:ceofood_lojista/pages/MotivosCancelamento.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -291,6 +292,8 @@ class _PedidoStatusPageState extends State<PedidoStatusPage> {
                           ],
                         ),
                         onPressed: () async {
+
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> new MotivoCancelamentoPage() ));
 
                         },
                       ),

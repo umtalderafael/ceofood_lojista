@@ -238,7 +238,7 @@ class _LoginPageState extends State<LoginPage> {
 //                    }
 
 
-                    String json = '{"nome":"Pizzaria Arte Nobre","email":"contato@artenobrepizarria.com.br", "celular":"17982245938", "imagem": "https://static.expressodelivery.com.br/imagens/banners/35795/Expresso-Delivery_48d2f753b05c87739dd7b62b3fa730d9.png", "token":"sf41ds65f4sd6f4sd65f4sd6f54sd6f54sd65f4sd65f4sd65f46sd4"}';
+                    String json = '{"nome":"Pizzaria Arte Nobre","email":"contato@artenobrepizarria.com.br", "celular":"17982245938", "imagem": "https://www.pizzariabigboca.com.br/wp-content/uploads/2019/06/2.png", "token":"sf41ds65f4sd6f4sd65f4sd6f54sd6f54sd65f4sd65f4sd65f46sd4"}';
                     await _adicionarUsuario(json);
 
                     Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));

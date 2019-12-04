@@ -345,6 +345,7 @@ class _HomePageState extends State<HomePage> {
 
           },
           child: new AnimatedCard(
+
             direction: AnimatedCardDirection.left, //Initial animation direction
             initDelay: Duration(milliseconds: 0), //Delay to initial animation
             duration: Duration(milliseconds: 1000), //Initial animation duration

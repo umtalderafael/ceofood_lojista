@@ -1,4 +1,5 @@
 import 'package:ceofood_lojista/pages/PedidoStatusPage.dart';
+import 'package:ceofood_lojista/pages/PerfilPage.dart';
 import 'package:flutter/material.dart';
 import 'package:ceofood_lojista/model/modelProduto.dart';
 
@@ -129,20 +130,31 @@ class _PedidoDetalhesPageState extends State<PedidoDetalhesPage> {
                   ],
                 ),
 
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
 
-                new Padding(padding: const EdgeInsets.fromLTRB(25, 30, 0, 30),
-                  child: new Text('Data: 22/11/2019 as 22:30', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),),
-                ),
+                    new Padding(padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: new Text('Data: 22/11/2019 as 22:30', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),),
+                    ),
 
+                    new Padding(padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                      child: new Text('Delivery', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),),
+                    ),
 
+                  ],
+                )
 
               ],
 
             ),
           ),
 
-
-          new Padding(padding: const EdgeInsets.fromLTRB(30, 20, 30, 20), child:
+          InkWell(
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => PerfilPage()));
+            },
+            child: new Padding(padding: const EdgeInsets.fromLTRB(30, 20, 30, 20), child:
             new Card(
               elevation: 8,
               child: new ListTile(
@@ -152,6 +164,7 @@ class _PedidoDetalhesPageState extends State<PedidoDetalhesPage> {
                 title: Text('Rafael Carvalho'),
                 subtitle: Text('(17) 98224-5938'),
               ),
+            ),
             ),
           ),
 
