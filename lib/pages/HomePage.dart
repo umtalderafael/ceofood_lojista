@@ -371,14 +371,14 @@ class _HomePageState extends State<HomePage> {
                               new Container(
                                 width: 60,
                                 child: new Text('Pedido',
-                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
                                 ),
                               ),
 
                               new Container(
                                 width: 60,
                                 child: new Text('#${listaPedidos[index].id}',
-                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 10),
+                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 10, color: Colors.white),
                                 ),
                               ),
 

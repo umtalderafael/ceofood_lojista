@@ -53,8 +53,8 @@ class _SuportePageState extends State<SuportePage> {
             onPressed: () {
 
               FlutterOpenWhatsapp.sendSingleMessage(
-                  "551732215474",
-                  "Olá, estou utilizando o app Manda Manipular e gostaria de tirar uma dúvida."
+                  "5517982245938",
+                  "Olá, estou utilizando o app CeoFood Lojista e gostaria de tirar uma dúvida."
               );
 
             },

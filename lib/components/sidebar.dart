@@ -171,7 +171,15 @@ class _SidebarState extends State<Sidebar> {
             ),
           ),
 
-
+          new InkWell(
+            onTap: (){
+//              Navigator.push(context, PageTransition(type: PageTransitionType.scale, child: PesquisarArtistaPage()));
+            },
+            child: new ListTile(
+              title: new Text('Impressões', style: TextStyle(fontWeight: FontWeight.bold),),
+              leading: new Icon(FontAwesomeIcons.print, color: Colors.deepOrange,),
+            ),
+          ),
 
           new InkWell(
             child: new ListTile(
@@ -194,8 +202,6 @@ class _SidebarState extends State<Sidebar> {
 
             },
           ),
-
-
 
           new InkWell(
             child: new ListTile(

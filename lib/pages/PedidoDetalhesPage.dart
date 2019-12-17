@@ -61,20 +61,16 @@ class _PedidoDetalhesPageState extends State<PedidoDetalhesPage> {
         backgroundColor: Colors.deepOrange,
         actions: <Widget>[
 
-
-
-          FlatButton.icon(
+          new FlatButton.icon(
             textColor: Colors.white,
-            icon: Icon(Icons.forward_5, size: 18,),
-            label: Text('Status', style: TextStyle(fontSize: 14),),
+            icon: Icon(Icons.print, size: 18,),
+            label: Text('Imprimir', style: TextStyle(fontSize: 14),),
             onPressed: () async {
 
-              Navigator.push(context, MaterialPageRoute(builder: (context) => PedidoStatusPage()));
+
 
             },
           ),
-
-
 
 
         ],
@@ -94,7 +90,7 @@ class _PedidoDetalhesPageState extends State<PedidoDetalhesPage> {
                     InkWell(
                       onTap: (){
 
-  //                      Navigator.push(context, MaterialPageRoute(builder: (context) => PedidoStatusPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => PedidoStatusPage()));
 
                       },
                       child: new Container(

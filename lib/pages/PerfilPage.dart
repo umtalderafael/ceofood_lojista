@@ -129,7 +129,7 @@ class _PerfilPageState extends State<PerfilPage> {
               child: new CircleAvatar(
                 backgroundColor: Colors.deepOrange,
                 radius: 70,
-                backgroundImage: AssetImage("images/profile.png"),
+                backgroundImage: AssetImage("assets/profile.png"),
               ),
               onTap: (){
 //                Navigator.push(context, MaterialPageRoute(builder: (context)=> new EditarImagemPage() ));
