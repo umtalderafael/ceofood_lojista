@@ -15,7 +15,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Sidebar extends StatefulWidget {
 
-
   final String nome;
   final String email;
   final String imagem;
@@ -193,8 +192,20 @@ class _SidebarState extends State<Sidebar> {
 
           new InkWell(
             child: new ListTile(
+              title: new Text('Dúvidas frequentes'),
+              leading: new Icon(FontAwesomeIcons.question, color: Colors.deepOrange,),
+            ),
+            onTap: (){
+
+              Navigator.push(context, PageTransition(type: PageTransitionType.rightToLeft, child: SuportePage()));
+
+            },
+          ),
+
+          new InkWell(
+            child: new ListTile(
               title: new Text('Suporte'),
-              leading: new Icon(FontAwesomeIcons.questionCircle, color: Colors.deepOrange,),
+              leading: new Icon(FontAwesomeIcons.headset, color: Colors.deepOrange,),
             ),
             onTap: (){
 

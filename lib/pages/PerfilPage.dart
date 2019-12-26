@@ -79,14 +79,15 @@ class _PerfilPageState extends State<PerfilPage> {
         title: Text('Perfil', style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),),
         actions: <Widget>[
 
-          new FlatButton.icon(
-            textColor: Colors.deepOrange,
-            icon: Icon(Icons.edit, size: 16,), //`Icon` to display
-            label: Text('Editar', style: TextStyle(fontSize: 12),), //`Text` to display
-            onPressed: () {
-//              Navigator.push(context, MaterialPageRoute(builder: (context)=> new EditarPage() ));
-            },
-          ),
+//          new FlatButton.icon(
+//            textColor: Colors.deepOrange,
+//            icon: Icon(Icons.edit, size: 16,), //`Icon` to display
+//            label: Text('Editar', style: TextStyle(fontSize: 12),), //`Text` to display
+//            onPressed: () {
+////              Navigator.push(context, MaterialPageRoute(builder: (context)=> new EditarPage() ));
+//            },
+//          ),
+
         ],
       ),
       body: new SafeArea(
@@ -129,7 +130,7 @@ class _PerfilPageState extends State<PerfilPage> {
               child: new CircleAvatar(
                 backgroundColor: Colors.deepOrange,
                 radius: 70,
-                backgroundImage: AssetImage("assets/profile.png"),
+                backgroundImage: AssetImage("images/profile.png"),
               ),
               onTap: (){
 //                Navigator.push(context, MaterialPageRoute(builder: (context)=> new EditarImagemPage() ));

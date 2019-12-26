@@ -303,27 +303,24 @@ class _LoginPageState extends State<LoginPage> {
         Center(
             child: conteudo
         ),
-        Align(
-            alignment: Alignment.bottomCenter,
-            child: Theme(
-                data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
-                child: InkWell(
-                    onTap: (){
-
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => SuportePage()));
-
-                    },
-                    child: new Padding(padding: const EdgeInsets.all(20),
-                    child: new Text("Solicitar suporte",
-                      textAlign: TextAlign.center,
-                      style: new TextStyle(fontSize: 18.0, color: Colors.white, fontWeight: FontWeight.bold)
-                  ),
-                ))
-            )
-        ),
-
-
-
+//        Align(
+//            alignment: Alignment.bottomCenter,
+//            child: Theme(
+//                data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
+//                child: InkWell(
+//                    onTap: (){
+//
+//                      Navigator.push(context, MaterialPageRoute(builder: (context) => SuportePage()));
+//
+//                    },
+//                    child: new Padding(padding: const EdgeInsets.all(20),
+//                    child: new Text("Solicitar suporte",
+//                      textAlign: TextAlign.center,
+//                      style: new TextStyle(fontSize: 18.0, color: Colors.white, fontWeight: FontWeight.bold)
+//                  ),
+//                ))
+//            )
+//        ),
 
       ],
     );

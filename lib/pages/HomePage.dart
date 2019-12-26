@@ -245,18 +245,10 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.deepOrange,
       actions: <Widget>[
 
-        new FlatButton.icon(
-          textColor: Colors.white,
-          icon: Badge(
-            badgeColor: Colors.white,
-            badgeContent: Text('40', style: TextStyle(color: Colors.deepOrange, fontSize: 12)),
-          ),
-          label: Text('Pedidos', style: TextStyle(fontSize: 14)), //`Text` to display
-          onPressed: () {
-//            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => new PedidosFinalizadosPage()));
-          },
-        ),
+        new IconButton(icon: Icon(FontAwesomeIcons.filter, size: 20, color: Colors.white), onPressed: () async {
 
+
+        }),
       ],
     );
 
@@ -342,10 +334,12 @@ class _HomePageState extends State<HomePage> {
 
             Navigator.push(context, MaterialPageRoute(builder: (context) => PedidoDetalhesPage()));
 
-
           },
           child: new AnimatedCard(
+            onRemove: (){
 
+
+            },
             direction: AnimatedCardDirection.left, //Initial animation direction
             initDelay: Duration(milliseconds: 0), //Delay to initial animation
             duration: Duration(milliseconds: 1000), //Initial animation duration
@@ -371,14 +365,14 @@ class _HomePageState extends State<HomePage> {
                               new Container(
                                 width: 60,
                                 child: new Text('Pedido',
-                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
+                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
                                 ),
                               ),
 
                               new Container(
                                 width: 60,
                                 child: new Text('#${listaPedidos[index].id}',
-                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 10, color: Colors.white),
+                                  textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Colors.white),
                                 ),
                               ),
 
@@ -412,6 +406,8 @@ class _HomePageState extends State<HomePage> {
                                     )
                                 ),
                               ),
+
+                              SizedBox(height: 5,),
 
                               new Container(
                                 width: 60,
@@ -516,15 +512,29 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Colors.white30,
             appBar: navBarLogado,
             drawer: sidebar,
-            body:  _carregando ? carregando :
-              new LiquidPullToRefresh(
-                    color: Colors.deepOrangeAccent,
-                    backgroundColor: Colors.white,
-                    key: _refreshIndicatorKey,
-                    onRefresh: _handleRefresh,
-                    showChildOpacityTransition: true,
-                    child: listagem
-                ),
+            body:
+            _carregando ? carregando :
+            new LiquidPullToRefresh(
+                  color: Colors.deepOrangeAccent,
+                  backgroundColor: Colors.white,
+                  key: _refreshIndicatorKey,
+                  onRefresh: _handleRefresh,
+                  showChildOpacityTransition: true,
+                  child: listagem
+              ),
+          floatingActionButton:   Badge(
+            badgeColor: Colors.white,
+            badgeContent: new Padding(padding: const EdgeInsets.all(3),
+              child: Text('40', style: TextStyle(color: Colors.deepOrange)),
+            ),
+            child: FloatingActionButton.extended(
+              onPressed: () {
+
+              },
+              label: Text('Pedidos', style: TextStyle(color: Colors.white),),
+              backgroundColor: Colors.deepOrange,
+            ),
+          ),
 
 
 
